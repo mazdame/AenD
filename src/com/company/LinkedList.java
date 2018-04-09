@@ -35,8 +35,9 @@ class LinkList<T> {
         StringBuilder builder = new StringBuilder();
         Node current = first;
         while (current != null) {
-            builder.append(current).append(" ");
+            builder.append(current).append("");
             current = current.next;
+
         }
         return builder.toString();
     }
