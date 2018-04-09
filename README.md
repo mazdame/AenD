@@ -1,6 +1,6 @@
 # AenD
 
-Algoritme and Datastructures
+Algoritmes and Datastructures
 
 
 
