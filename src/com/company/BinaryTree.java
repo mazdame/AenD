@@ -1,11 +1,11 @@
 package com.company;
-class BinaryTreee {
+class BinaryTree {
     private TreeNode root;
 
-    public BinaryTreee() {
+    public BinaryTree() {
     }
 
-    public BinaryTreee(int[] a) {
+    public BinaryTree(int[] a) {
         this();
         for (int i : a) {
             add(i);
