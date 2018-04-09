@@ -15,19 +15,19 @@ class MyGenericsStack<T extends Object> {
 
     public void push(T entry){
         if(this.isStackFull()){
-            System.out.println(("Stack is full. Increasing the capacity."));
+            System.out.println(("Stack is vol, capaciteit wordt verhoogd"));
             this.increaseStackCapacity();
         }
-        System.out.println("Adding: "+entry);
+        System.out.println("toegevoegd: "+entry);
         this.stackArr[++top] = entry;
     }
 
     public T pop() throws Exception {
         if(this.isStackEmpty()){
-            throw new Exception("Stack is empty. Can not remove element.");
+            throw new Exception("stack is leeg, element kan worden verwijderd");
         }
         T entry = this.stackArr[top--];
-        System.out.println("Removed entry: "+entry);
+        System.out.println("verwijderde entry: "+entry);
         return entry;
     }
 
@@ -57,7 +57,7 @@ class MyGenericsStack<T extends Object> {
 
     public static void main(String a[]){
         MyGenericsStack<String> stringStack = new MyGenericsStack<String>(2);
-        stringStack.push("java2novice");
+        stringStack.push("hallo");
         MyGenericsStack<Integer> integerStack = new MyGenericsStack<Integer>(2);
         integerStack.push(23);
     }
