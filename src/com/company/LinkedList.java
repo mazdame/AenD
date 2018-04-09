@@ -1,5 +1,5 @@
 package com.company;
-class LinkList<T> {
+class LinkList<T> { // class for linkedlist
 
     private static class Node<T> {
 
