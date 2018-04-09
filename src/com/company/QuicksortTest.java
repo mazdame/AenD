@@ -8,7 +8,7 @@ class QuicksortTest {
 
     @Test
     void sort() {
-    }
+}
 
     @Test
     void quickSort() {
@@ -20,9 +20,5 @@ class QuicksortTest {
 
     @Test
     void displayArray() {
-    }
-
-    @Test
-    void displayArray1() {
     }
 }
