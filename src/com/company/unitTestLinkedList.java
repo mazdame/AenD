@@ -16,9 +16,9 @@ public class unitTestLinkedList {
         st.push(50);
         st.push(70);
         st.push(190);
-        assertEquals("190 70 50", st.toString());
+        assertEquals("1907050", st.toString());
         assertEquals(190, (int) st.pop());
-        assertEquals("70 50", st.toString());
+        assertEquals("7050", st.toString());
     }
 
     @Test
