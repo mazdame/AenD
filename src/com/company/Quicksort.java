@@ -1,7 +1,7 @@
 package com.company;
 
 
-public class qckSort {
+public class Quicksort  {
     private int[] numbers;
     private int number;
 
@@ -12,10 +12,10 @@ public class qckSort {
         }
         this.numbers = values;
         number = values.length;
-        qckSort(0, number - 1);
+        quicksort(0, number - 1);
     }
 
-    private void qckSort(int low, int high) {
+    private void quicksort(int low, int high) {
         int i = low, j = high;
         // Get the pivot element from the middle of the list
         int pivot = numbers[low + (high-low)/2];
@@ -46,9 +46,9 @@ public class qckSort {
         }
         // Recursion
         if (low < j)
-            qckSort(low, j);
+            quicksort(low, j);
         if (i < high)
-            qckSort(i, high);
+            quicksort(i, high);
     }
 
     private void exchange(int i, int j) {
