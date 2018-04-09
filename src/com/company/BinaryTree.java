@@ -1,10 +1,11 @@
-public class BinaryTree {
+package com.company;
+class BinaryTreee {
     private TreeNode root;
 
-    public BinaryTree() {
+    public BinaryTreee() {
     }
 
-    public BinaryTree(int[] a) {
+    public BinaryTreee(int[] a) {
         this();
         for (int i : a) {
             add(i);
@@ -48,6 +49,16 @@ public class BinaryTree {
             }
         }
     }
+    @Override
+    public String toString() {
+        return toString(root);
+    }
 
+    private String toString(TreeNode node) {
+        if (node == null) {
+            return null;
+        }
+        return "[" + toString(node.left) + "," + node.item + "," + toString(node.right) + "]";
+    }
 }
 
