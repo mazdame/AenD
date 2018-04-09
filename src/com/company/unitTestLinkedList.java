@@ -1,5 +1,4 @@
 package com.company;
-package com.company;
 import jdk.nashorn.api.tree.BinaryTree;
 import org.junit.jupiter.api.Test;
 
