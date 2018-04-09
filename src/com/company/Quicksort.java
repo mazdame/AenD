@@ -1,59 +1,71 @@
 package com.company;
 
+public class Quicksort <T extends Comparable<T>>
+{
+    T array[];
+    int n;
 
-public class Quicksort  {
-    private int[] numbers;
-    private int number;
-
-    public void sort(int[] values) {
-        // check for empty or null array
-        if (values ==null || values.length==0){
-            return;
-        }
-        this.numbers = values;
-        number = values.length;
-        quicksort(0, number - 1);
+    public void sort(T [] a){
+        n=a.length;
+        array=a;
+        quickSort(0,n-1);
     }
 
-    private void quicksort(int low, int high) {
-        int i = low, j = high;
-        // Get the pivot element from the middle of the list
-        int pivot = numbers[low + (high-low)/2];
-
-        // Divide into two lists
-        while (i <= j) {
-            // If the current value from the left list is smaller than the pivot
-            // element then get the next element from the left list
-            while (numbers[i] < pivot) {
-                i++;
-            }
-            // If the current value from the right list is larger than the pivot
-            // element then get the next element from the right list
-            while (numbers[j] > pivot) {
-                j--;
-            }
-
-            // If we have found a value in the left list which is larger than
-            // the pivot element and if we have found a value in the right list
-            // which is smaller than the pivot element then we exchange the
-            // values.
-            // As we are done we can increase i and j
-            if (i <= j) {
-                exchange(i, j);
-                i++;
-                j--;
+    public void quickSort(int p, int q){
+        int j;
+        if( p<q){
+            j=partition(p,q);
+            quickSort(p, j-1);
+            quickSort(j+1,q);
+        }
+    }
+    int partition(int p, int q){
+        T pivot = array[q];
+        int i = p-1;
+        for(int j = p; j<q; j++){
+            if(array[j].compareTo(pivot)<0){
+                //swap array[i+1] and array[j]
+                i=i+1;
+                T temp=array[i];
+                array[i]=array[j];
+                array[j]=temp;
             }
         }
-        // Recursion
-        if (low < j)
-            quicksort(low, j);
-        if (i < high)
-            quicksort(i, high);
+        i=i+1;
+        T temp=array[i]; array[i]=array[q]; array[q]=temp;
+        return i;
+    }
+    public  void displayArray(){
+
+        for(int i=0; i< n-1; i++)
+            System.out.print(array[i]+" < ");
+        System.out.println(array[n-1]);
     }
 
-    private void exchange(int i, int j) {
-        int temp = numbers[i];
-        numbers[i] = numbers[j];
-        numbers[j] = temp;
+    public  void displayArray(T [] la){
+        int ln = la.length;
+        for(int i=0; i< ln-1; i++)
+            System.out.print(la[i]+" < ");
+        System.out.println(la[ln-1]);
+    }
+    public static void main(String args[]){
+        Quicksort qs1= new Quicksort();
+        Quicksort qs2= new Quicksort();
+        Quicksort qs4= new Quicksort();
+
+        Double  [] a1 = {0.12, 0.92, 0.23, .89, 0.42, 0.73, 0.34, 0.64, 0.51, 0.42, 0.5};
+        Integer [] a2 = {1, 9, 2, 8, 3, 7, 4, 6, 5};
+        String  [] a3 = {"me", "she", "you", "he"};
+        Character    [] a4 = {'a', 'p', 'p', 'l','e','m','a','c','h','i','n','t','o','s','h'};
+        qs4.sort(a4); //On completition of this call, a4 is sorted, but the result is printed later.
+        qs1.sort(a1);
+        qs2.sort(a2);
+        qs1.displayArray();
+        qs2.displayArray();
+        qs2.sort(a3);
+        qs2.displayArray(); // How do you print the result of sorted array a2 now?
+        qs4.displayArray();
+        qs1.displayArray(a2); //this would work with any instance qs1, qs2, qs3, qs4 or a new one.
+        new Quicksort().displayArray(a3) ; // an instance with no name is created to print a3
     }
 }
