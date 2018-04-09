@@ -2,11 +2,11 @@ package com.company;
 
 public class doublylinkedlist<E extends Comparable<E>>
 {
-    // Nodes for the first and last element
+
     Node head;
     Node tail;
 
-    // list size
+
     int length;
 
     public doublylinkedlist()
@@ -14,10 +14,10 @@ public class doublylinkedlist<E extends Comparable<E>>
         this.length = 0;
     }
 
-    // add function that inserts elements sorted
+
     public void add(E value)
     {
-        // first insert
+
         if (length==0)
         {
             head = new Node(value, null, null);
@@ -29,12 +29,11 @@ public class doublylinkedlist<E extends Comparable<E>>
         {
             if (value.compareTo(head.getValue()) < 0)
             {
-                // insert before head, make new head
-                // set next to head, previous to null
+
                 Node newNode = new Node(value, head, null);
-                // point old head previous to new node
+
                 head.setPrevious(newNode);
-                // make new node head
+
                 head = newNode;
                 length++;
                 return;
@@ -46,12 +45,11 @@ public class doublylinkedlist<E extends Comparable<E>>
                 {
                     if (value.compareTo(current.getValue()) <= 0)
                     {
-                        // insert before current
-                        // make new nodes next = current, previous = current.previous
+
                         Node newNode = new Node(value, current, current.getPrevious());
-                        // point node before insert's next to newnode
+
                         current.getPrevious().setNext(newNode);
-                        // make new node previous to current
+
                         current.setPrevious(newNode);
                         length++;
                         return;
@@ -59,7 +57,7 @@ public class doublylinkedlist<E extends Comparable<E>>
                     current = current.getNext();
                 }
 
-                // add to tail
+
                 Node newNode = new Node(value, null, tail);
                 tail.setNext(newNode);
                 tail = newNode;
@@ -73,9 +71,9 @@ public class doublylinkedlist<E extends Comparable<E>>
     {
         Node found = find(value);
         if (found != null)
-        // node exists
+
         {
-            // check for head
+
             if (found.getPrevious() == null)
             {
                 found.getNext().setPrevious(null);
@@ -83,7 +81,7 @@ public class doublylinkedlist<E extends Comparable<E>>
             }
             else
             {
-                // check for tail
+
                 if (found.getNext() == null)
                 {
                     found.getPrevious().setNext(null);
@@ -91,7 +89,7 @@ public class doublylinkedlist<E extends Comparable<E>>
                 }
                 else
                 {
-                    // fix pointers
+
                     found.getPrevious().setNext(found.getNext());
                     found.getNext().setPrevious(found.getPrevious());
                 }
@@ -100,11 +98,7 @@ public class doublylinkedlist<E extends Comparable<E>>
         }
     }
 
-    // private method to find node based on value
-    // used by remove() and contains()
-    // If using complex objects, you will
-    // have to override equals to search by
-    // a single member field
+
     private Node find(E value)
     {
         Node current = head;
@@ -175,7 +169,7 @@ public class doublylinkedlist<E extends Comparable<E>>
 
     }
 
-    // recursive display functions
+
     public String toStringRecursive()
     {
         return "Count = " + length + "\n" + toStringRecursive(head);
@@ -188,7 +182,7 @@ public class doublylinkedlist<E extends Comparable<E>>
         return retval + toStringRecursive(node.getNext());
     }
 
-    // inner class for nodes
+
     class Node
     {
         private E value;
