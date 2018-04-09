@@ -2,10 +2,8 @@ package com.company;
 
 public class doublylinkedlist<E extends Comparable<E>>
 {
-
     Node head;
     Node tail;
-
 
     int length;
 
@@ -14,10 +12,9 @@ public class doublylinkedlist<E extends Comparable<E>>
         this.length = 0;
     }
 
-
     public void add(E value)
     {
-
+        // first insert
         if (length==0)
         {
             head = new Node(value, null, null);
@@ -29,11 +26,8 @@ public class doublylinkedlist<E extends Comparable<E>>
         {
             if (value.compareTo(head.getValue()) < 0)
             {
-
                 Node newNode = new Node(value, head, null);
-
                 head.setPrevious(newNode);
-
                 head = newNode;
                 length++;
                 return;
@@ -45,18 +39,14 @@ public class doublylinkedlist<E extends Comparable<E>>
                 {
                     if (value.compareTo(current.getValue()) <= 0)
                     {
-
                         Node newNode = new Node(value, current, current.getPrevious());
-
                         current.getPrevious().setNext(newNode);
-
                         current.setPrevious(newNode);
                         length++;
                         return;
                     }
                     current = current.getNext();
                 }
-
 
                 Node newNode = new Node(value, null, tail);
                 tail.setNext(newNode);
@@ -71,9 +61,7 @@ public class doublylinkedlist<E extends Comparable<E>>
     {
         Node found = find(value);
         if (found != null)
-
         {
-
             if (found.getPrevious() == null)
             {
                 found.getNext().setPrevious(null);
@@ -81,7 +69,6 @@ public class doublylinkedlist<E extends Comparable<E>>
             }
             else
             {
-
                 if (found.getNext() == null)
                 {
                     found.getPrevious().setNext(null);
@@ -89,7 +76,6 @@ public class doublylinkedlist<E extends Comparable<E>>
                 }
                 else
                 {
-
                     found.getPrevious().setNext(found.getNext());
                     found.getNext().setPrevious(found.getPrevious());
                 }
@@ -97,7 +83,6 @@ public class doublylinkedlist<E extends Comparable<E>>
             length--;
         }
     }
-
 
     private Node find(E value)
     {
@@ -169,7 +154,6 @@ public class doublylinkedlist<E extends Comparable<E>>
 
     }
 
-
     public String toStringRecursive()
     {
         return "Count = " + length + "\n" + toStringRecursive(head);
@@ -181,7 +165,6 @@ public class doublylinkedlist<E extends Comparable<E>>
         String retval = node.getValue().toString() + "\n";
         return retval + toStringRecursive(node.getNext());
     }
-
 
     class Node
     {
