@@ -1,13 +1,13 @@
 package com.company;
 
-class MyGenericsStack<T extends Object> {
+class stack<T extends Object> {
 
     private int stackSize;
     private T[] stackArr;
     private int top;
 
     @SuppressWarnings("unchecked")
-    public MyGenericsStack(int size) {
+    public stack(int size) {
         this.stackSize = size;
         this.stackArr = (T[]) new Object[stackSize];
         this.top = -1;
@@ -56,9 +56,9 @@ class MyGenericsStack<T extends Object> {
     }
 
     public static void main(String a[]){
-        MyGenericsStack<String> stringStack = new MyGenericsStack<String>(2);
+        stack<String> stringStack = new stack<String>(2);
         stringStack.push("hallo");
-        MyGenericsStack<Integer> integerStack = new MyGenericsStack<Integer>(2);
+        stack<Integer> integerStack = new stack<Integer>(2);
         integerStack.push(23);
     }
 }
