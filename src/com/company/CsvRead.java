@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class CsvRead {
 
-    public static ArrayList<Integer> readCSV(String path) {
+    public static ArrayList<Integer> readCSV() {
         ArrayList<Integer> test = new ArrayList<Integer>();
         String line = "";
         String cvsSplitBy = ",";
