@@ -8,17 +8,6 @@ class QuicksortTest {
 
     @Test
     void sort() {
+
 }
-
-    @Test
-    void quickSort() {
-    }
-
-    @Test
-    void partition() {
-    }
-
-    @Test
-    void displayArray() {
-    }
 }

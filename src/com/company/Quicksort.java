@@ -35,17 +35,4 @@ public class Quicksort <T extends Comparable<T>>
         T temp=array[i]; array[i]=array[q]; array[q]=temp;
         return i;
     }
-    public  void displayArray(){
-
-        for(int i=0; i< n-1; i++)
-            System.out.print(array[i]+" < ");
-        System.out.println(array[n-1]);
-    }
-
-    public  void displayArray(T [] la){
-        int ln = la.length;
-        for(int i=0; i< ln-1; i++)
-            System.out.print(la[i]+" < ");
-        System.out.println(la[ln-1]);
-    }
 }
