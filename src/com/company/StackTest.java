@@ -3,31 +3,11 @@ package com.company;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+import com.company.stack;
 class stackTest {
 
     @Test
-    void push() {
+    public void TestStack() {
 
-    }
-
-    @Test
-    void pop() {
-    }
-
-    @Test
-    void peek() {
-    }
-
-    @Test
-    void isStackEmpty() {
-    }
-
-    @Test
-    void isStackFull() {
-    }
-
-    @Test
-    void main() {
     }
 }
