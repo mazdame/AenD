@@ -1,5 +1,5 @@
 package com.company;
-class LinkList<T> {
+class LinkedList<T> {
 
     private static class Node<T> {
 
@@ -48,9 +48,9 @@ class LinkList<T> {
 
 }
 
-class LinkListStack<T> {
+class LinkedListStack<T> {
 
-    private final LinkList<T> linkedList = new LinkList<>();
+    private final LinkedList<T> linkedList = new LinkedList<>();
 
     public void push(T data) {
         linkedList.addFirst(data);

@@ -20,39 +20,4 @@ public class insertionSort {
             }
         }
     }
-
-    public class InsertionSortTester {
-        private String[] unsortedNames = new String[]{
-                "Pankaj",
-                "Paresh",
-                "Ankit",
-                "Sankalp",
-                "Aditya",
-                "Prem",
-                "Rocket",
-                "Singh",
-                "Alabama",
-                "Alaska",
-                "Animal"};
-        private String[] sortedNames = new String[]{
-                "Aditya",
-                "Alabama",
-                "Alaska",
-                "Animal",
-                "Ankit",
-                "Pankaj",
-                "Paresh",
-                "Prem",
-                "Rocket",
-                "Sankalp",
-                "Singh"};
-
-        @Test
-        public void testStringSort() {
-            GenericInsertionSorter ss = new GenericInsertionSorter();
-            ss.sort(unsortedNames);
-            Assert.assertArrayEquals(unsortedNames, sortedNames);
-
-        }
-    }
 }
