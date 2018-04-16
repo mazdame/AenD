@@ -1,5 +1,4 @@
 package com.company;
-import jdk.nashorn.api.tree.BinaryTree;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -12,27 +11,27 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class unitTestLinkedList {
     @Test
     public void testPushAndPop() {
-        LinkListStack<Integer> st = new LinkListStack<>();
-        st.push(50);
-        st.push(70);
-        st.push(190);
-        assertEquals("1907050", st.toString());
-        assertEquals(190, (int) st.pop());
-        assertEquals("7050", st.toString());
+        LinkListStack<Integer> Link = new LinkListStack<>();
+        Link.push(60);
+        Link.push(10);
+        Link.push(120);
+        assertEquals("1201060", Link.toString());
+        assertEquals(120, (int) Link.pop());
+        assertEquals("1060", Link.toString());
     }
 
     @Test
     public void testPopUntilEmpty() {
-        List<Integer> values = Arrays.asList(50, 70, 190, 20);
-        LinkListStack<Integer> st = new LinkListStack<>();
-        assertTrue(st.isEmpty());
+        List<Integer> values = Arrays.asList(60, 10, 120, 80);
+        LinkListStack<Integer> Link = new LinkListStack<>();
+        assertTrue(Link.isEmpty());
         for (Integer value : values) {
-            st.push(value);
+            Link.push(value);
         }
-        assertFalse(st.isEmpty());
+        assertFalse(Link.isEmpty());
         for (int i = values.size(); i > 0; --i) {
-            assertEquals(values.get(i - 1), st.pop());
+            assertEquals(values.get(i - 1), Link.pop());
         }
-        assertTrue(st.isEmpty());
+        assertTrue(Link.isEmpty());
     }
 }

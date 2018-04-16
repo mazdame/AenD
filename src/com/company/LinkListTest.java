@@ -15,7 +15,7 @@ public class LinkListTest {
     @Deployment
     public static JavaArchive createDeployment() {
         return ShrinkWrap.create(JavaArchive.class)
-                .addClass(LinkList.class)
+                .addClass(LinkedList.class)
                 .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
     }
 
