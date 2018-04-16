@@ -24,7 +24,7 @@ public class Quicksort <T extends Comparable<T>>
         int i = p-1;
         for(int j = p; j<q; j++){
             if(array[j].compareTo(pivot)<0){
-                //swap array[i+1] and array[j]
+
                 i=i+1;
                 T temp=array[i];
                 array[i]=array[j];
