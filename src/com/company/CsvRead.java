@@ -46,4 +46,8 @@ public class CsvRead {
         return true;
     }
 
+    public static void main(String a[]){
+        System.out.println(readCSV());
+    }
+
 }

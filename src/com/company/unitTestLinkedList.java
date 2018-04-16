@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class unitTestLinkedList {
     @Test
     public void testPushAndPop() {
-        LinkListStack<Integer> Link = new LinkListStack<>();
+        LinkedListStack<Integer> Link = new LinkedListStack<>();
         Link.push(60);
         Link.push(10);
         Link.push(120);
@@ -23,7 +23,7 @@ public class unitTestLinkedList {
     @Test
     public void testPopUntilEmpty() {
         List<Integer> values = Arrays.asList(60, 10, 120, 80);
-        LinkListStack<Integer> Link = new LinkListStack<>();
+        LinkedListStack<Integer> Link = new LinkedListStack<>();
         assertTrue(Link.isEmpty());
         for (Integer value : values) {
             Link.push(value);
