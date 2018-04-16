@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.*;
 
-class Queue<T> implements Iterable<T> {
+class queue<T> implements Iterable<T> {
 
     private LinkedList<T> elements = new LinkedList<T>();
 
