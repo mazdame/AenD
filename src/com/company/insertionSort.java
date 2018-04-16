@@ -6,7 +6,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class insertionSort {
-    class GenericInsertionSorter {
+    static class GenericInsertionSorter {
         public <T extends Comparable<T>> void sort(T[] elems) {
             int size = elems.length;
             for (int outerLoopIdx = 1; outerLoopIdx < size; ++outerLoopIdx) {
