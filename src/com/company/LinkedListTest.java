@@ -12,6 +12,7 @@ class LinkedListTest {
 
     @Test
     void removeFirst() {
+
     }
 
     @Test
@@ -21,5 +22,6 @@ class LinkedListTest {
 
     @Test
     void isEmpty() {
+
     }
 }
