@@ -13,7 +13,7 @@ public class CsvRead {
         String cvsSplitBy = ",";
 
 
-        try (BufferedReader br = new BufferedReader(new FileReader(path))){
+        try (BufferedReader br = new BufferedReader(new FileReader("src/com/company/legosets.csv"))){
 
             while((line = br.readLine()) != null) {
 
