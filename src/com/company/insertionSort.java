@@ -23,17 +23,17 @@ public class insertionSort {
 
     public class InsertionSortTester {
         private String[] unsortedNames = new String[]{
-                "Pankaj",
-                "Paresh",
-                "Ankit",
-                "Sankalp",
-                "Aditya",
-                "Prem",
-                "Rocket",
-                "Singh",
-                "Alabama",
-                "Alaska",
-                "Animal"};
+                "olifant",
+                "vis",
+                "dier",
+                "antiloop",
+                "walvis",
+                "rog",
+                "hond",
+                "kat",
+                "marmot",
+                "koala",
+                "struisvogel"};
         private String[] sortedNames = new String[]{
                 "Aditya",
                 "Alabama",
