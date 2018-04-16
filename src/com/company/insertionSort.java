@@ -35,17 +35,17 @@ public class insertionSort {
                 "koala",
                 "struisvogel"};
         private String[] sortedNames = new String[]{
-                "Aditya",
-                "Alabama",
-                "Alaska",
-                "Animal",
-                "Ankit",
-                "Pankaj",
-                "Paresh",
-                "Prem",
-                "Rocket",
-                "Sankalp",
-                "Singh"};
+                "antiloop",
+                "dier",
+                "hond",
+                "kat",
+                "koala",
+                "marmot",
+                "olifant",
+                "rog",
+                "struisvogel",
+                "vis",
+                "walvis"};
 
         @Test
         public void testStringSort() {
